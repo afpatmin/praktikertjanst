@@ -81,15 +81,15 @@ class DocumentService extends ResourceService<Document> {
         ..type = ResourceType.document
         ..size = '200.9 kb'
         ..url['sv'] =
-            'https://hg-rid.eu/documents/sv/checklista-skotsel-av-amalgamavskiljare-1.pdf'
+            'https://hg-rid.eu/documents/sv/checklist-upkeep-of-amalgam-separator-sv.pdf'
         ..url['en'] =
-            'https://hg-rid.eu/documents/en/checklist-upkeep-of-amalgam-separator-1.pdf'
+            'https://hg-rid.eu/documents/en/checklist-upkeep-of-amalgam-separator-en.pdf'
         ..url['fr'] =
-            'https://hg-rid.eu/documents/fr/Checklist_pour_entretien_de_separateur_damalgame_1.pdf'
+            'https://hg-rid.eu/documents/fr/checklist-upkeep-of-amalgam-separator-fr.pdf'
         ..url['es'] =
-            'https://hg-rid.eu/documents/es/Mantenimiento_de_la_lista_de_verificacion_1.pdf'
+            'https://hg-rid.eu/documents/es/checklist-upkeep-of-amalgam-separator-es.pdf'
         ..url['de'] =
-            'https://hg-rid.eu/documents/de/pruflist-des-amalgamabscheiders-1.pdf'
+            'https://hg-rid.eu/documents/de/checklist-upkeep-of-amalgam-separator-de.pdf'
         ..document_type = 'pdf',
       'Checklista övrig': Document()
         ..icon = 'pool'
@@ -118,15 +118,15 @@ class DocumentService extends ResourceService<Document> {
         ..type = ResourceType.document
         ..size = '303.3 kb'
         ..url['sv'] =
-            'https://hg-rid.eu/documents/sv/checklista-skotsel-av-amalgamavskiljare-2.pdf'
+            'https://hg-rid.eu/documents/sv/checklist-upkeep-of-amalgam-separator-sv-sign.pdf'
         ..url['en'] =
-            'https://hg-rid.eu/documents/en/checklist-upkeep-of-amalgam-separator-2.pdf'
+            'https://hg-rid.eu/documents/en/checklist-upkeep-of-amalgam-separator-en-sign.pdf'
         ..url['fr'] =
-            'https://hg-rid.eu/documents/fr/Checklist_pour_entretien_de_separateur_damalgame_2.pdf'
+            'https://hg-rid.eu/documents/fr/checklist-upkeep-of-amalgam-separator-fr-sign.pdf'
         ..url['es'] =
-            'https://hg-rid.eu/documents/es/Mantenimiento_de_la_lista_de_verificacion_2.pdf'
+            'https://hg-rid.eu/documents/es/checklist-upkeep-of-amalgam-separator-es-sign.pdf'
         ..url['de'] =
-            'https://hg-rid.eu/documents/de/pruflist-des-amalgamabscheiders-2.pdf'
+            'https://hg-rid.eu/documents/de/checklist-upkeep-of-amalgam-separator-de-sign.pdf'
         ..document_type = 'pdf',
       'EU:s förordning om kvicksilver': Document()
         ..icon = 'pool'
@@ -226,7 +226,7 @@ class DocumentService extends ResourceService<Document> {
           ..url = 'richtlinien')
         ..type = ResourceType.document
         ..size = '1,6 MB'
-              ..url['sv'] =
+        ..url['sv'] =
             'https://hg-rid.eu/documents/sv/vagledning-kvicksilver-tandvarden.pdf'
         ..url['en'] =
             'https://hg-rid.eu/documents/en/guidelines-mercury-for-dental-care-in-sweden.pdf'
