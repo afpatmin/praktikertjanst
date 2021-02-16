@@ -2,21 +2,27 @@ name: praktikertjanst
 description: Portal for praktikertjänst
 version: 0.0.1
 author: dmarl <dmarlovic83@gmail.com>
+publish_to: none
 environment:
-   sdk: ">=2.2.0 <3.0.0"
+  sdk: ">=2.2.0 <3.0.0"
 dependencies:
-  angular_router: ^2.0.0-alpha+23
   d_components:
-    git: https://github.com/afpatmin/d_components
+    git: https://github.com/afpatmin/d_components.git
+  fo_components:
+    git: https://github.com/afpatmin/fo_components.git
+  angular: ^6.0.1
+  angular_components: ^1.0.1
+  angular_router: ^2.0.0
   grid_css: ^1.0.0
-  intl: ^0.15.8
   http: ^0.12.0+2
-  fo_components: ^1.7.5+4
-  angular_components: ^0.14.0-alpha
-  angular: ^6.0.0-alpha
-  angular_compiler: ^0.4.5
+  intl: ^0.16.0
 dev_dependencies:
-  sass_builder: ^2.1.3
-  intl_translation: ^0.17.7
   build_runner: ^1.6.9
   build_web_compilers: ^2.3.0
+  intl_translation: ^0.17.10+1
+  sass_builder: ^2.1.3
+
+dependency_overrides:
+  grid_css: ^1.0.0
+  intl: ^0.16.0
+  analyzer: ^0.40.0
