@@ -27,7 +27,7 @@ import '../../services/video_service.dart';
     styleUrls: ['library_component.css'],
     templateUrl: 'library_component.html',
     pipes: [CapitalizePipe],
-    changeDetection: ChangeDetectionStrategy.OnPush)
+    changeDetection: ChangeDetectionStrategy.Default)
 class LibraryComponent implements OnDestroy {
   LibraryComponent(this.router, this.msg, this.riseService, this.quizService,
       this.videoService, this.sanitizer) {
@@ -41,6 +41,11 @@ class LibraryComponent implements OnDestroy {
 
     _onSearchSubscription =
         searchModel.selectionChanges.listen(_onSearchChange);
+  }
+
+  void onVideoClick(Video model) {
+    selectedModel = model;
+    model.complete = true;
   }
 
   @override
