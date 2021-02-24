@@ -1,40 +1,39 @@
 <div class="row"
      style="margin-top:140px">
-    <div class="col">
-        <h1 class="color-astronautblue">{{msg.library_header}}</h1>
-        <material-auto-suggest-input leadingGlyph="search"
-                                     [showClearIcon]="false"
-                                     class="color-astronautblue"
-                                     [label]="msg.type_here_to_search"
-                                     [popupMatchInputWidth]="true"
-                                     [highlightOptions]="true"
-                                     [selection]="searchModel"
-                                     [selectionOptions]="searchOptions"
-                                     [filterSuggestions]="true">
-        </material-auto-suggest-input>
-    </div>
+  <div class="col">
+    <h1 class="color-astronautblue">{{msg.library_header}}</h1>
+    <material-auto-suggest-input leadingGlyph="search"
+                                 [showClearIcon]="false"
+                                 class="color-astronautblue"
+                                 [label]="msg.type_here_to_search"
+                                 [popupMatchInputWidth]="true"
+                                 [highlightOptions]="true"
+                                 [selection]="searchModel"
+                                 [selectionOptions]="searchOptions"
+                                 [filterSuggestions]="true">
+    </material-auto-suggest-input>
+  </div>
 </div>
 <div class="row">
-    <div class="col l4 m6 s12"
-         *ngFor="let rise of riseService.data.values">
-        <p-resource [model]="rise"
-                    routerLink="{{msg.currentLanguage}}/{{msg.home_url}}/{{msg.library_url}}/{{rise.phrases[msg.currentLanguage].url}}">
-        </p-resource>
-    </div>
-    <div class="col l4 m6 s12"
-         *ngFor="let quiz of quizService.data.values">
-        <p-resource [model]="quiz"
-                    routerLink="{{msg.currentLanguage}}/{{msg.home_url}}/{{msg.library_url}}/{{quiz.phrases[msg.currentLanguage].url}}">
+  <div class="col l4 m6 s12"
+       *ngFor="let rise of riseService.data.values">
+    <p-resource [model]="rise"
+                routerLink="{{msg.currentLanguage}}/{{msg.home_url}}/{{msg.library_url}}/{{rise.phrases[msg.currentLanguage].url}}">
+    </p-resource>
+  </div>
+  <div class="col l4 m6 s12"
+       *ngFor="let quiz of quizService.data.values">
+    <p-resource [model]="quiz"
+                routerLink="{{msg.currentLanguage}}/{{msg.home_url}}/{{msg.library_url}}/{{quiz.phrases[msg.currentLanguage].url}}">
 
-        </p-resource>
-    </div>
-    <div class="col l4 m6 s12"
-         *ngFor="let video of videoService.data.values">
-        <p-resource [model]="video"
-                    (click)="selectedModel = video; video.complete = true">
-
-        </p-resource>
-    </div>
+    </p-resource>
+  </div>
+  <div class="col l4 m6 s12"
+       *ngFor="let video of videoService.data.values">
+    <p-resource [model]="video"
+                (click)="onVideoClick(video)">
+    </p-resource>
+  </div>
 </div>
 
 <p-documents [offsetTop]="0"></p-documents>
@@ -47,12 +46,12 @@
           (visibleChange)="selectedModel = null"
           [showCloseButton]="true"
           dense>
-    <div class="row">
-        <div class="col">
-            <iframe [src]="sanitizer.bypassSecurityTrustResourceUrl(selectedModel.url[msg.currentLanguage])"
-                    webkitallowfullscreen
-                    mozallowfullscreen
-                    allowfullscreen></iframe>
-        </div>
+  <div class="row">
+    <div class="col">
+      <iframe [src]="sanitizer.bypassSecurityTrustResourceUrl(selectedModel.url[msg.currentLanguage])"
+              webkitallowfullscreen
+              mozallowfullscreen
+              allowfullscreen></iframe>
     </div>
+  </div>
 </fo-modal>

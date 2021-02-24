@@ -19,7 +19,7 @@ import '../fullscreen_component/fullscreen_component.dart';
     styleUrls: ['documents_component.css'],
     templateUrl: 'documents_component.html',
     pipes: [CapitalizePipe],
-    changeDetection: ChangeDetectionStrategy.OnPush)
+    changeDetection: ChangeDetectionStrategy.Default)
 class DocumentsComponent implements OnInit {
   DocumentsComponent(this.documentService, this.msg);
 

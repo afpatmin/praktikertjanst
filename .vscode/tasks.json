@@ -1,52 +1,52 @@
 {
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "label": "webdev serve",
-            "type": "shell",
-            "command": "webdev serve",
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            }
-        },
-        {
-            "label": "remove build",
-            "type": "shell",
-            "command": "rm -r -f build"
-        },
-        {
-            "label": "webdev build",
-            "type": "shell",
-            "command": "webdev build --output web:build",
-            "dependsOn": ["remove build"],
-            "group": "build"    
-        },        
-        {
-            "label": "zip",
-            "type": "shell",
-            "command": "cd build; zip -r web.zip * -x \\*packages\\*",
-            "dependsOn": [
-                "webdev build"
-            ],
-            "problemMatcher": []
-        },
-        {
-            "label": "deploy",
-            "type": "shell",
-            "command": "scp -i ~/.ssh/praktikertjanst build/web.zip hgridhem@dosojin.oderland.com:public_html",
-            "dependsOn": [
-                "zip"
-            ],
-            "problemMatcher": []
-        },
-        {
-            "label": "connect",
-            "type": "shell",
-            "command": "ssh -i ~/.ssh/praktikertjanst hgridhem@dosojin.oderland.com",            
-            "problemMatcher": []
-        },
-
-    ]
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "webdev serve",
+      "type": "shell",
+      "command": "webdev serve",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "remove build",
+      "type": "shell",
+      "command": "rm -r -f build"
+    },
+    {
+      "label": "webdev build",
+      "type": "shell",
+      "command": "webdev build --output web:build",
+      "dependsOn": [
+        "remove build"
+      ],
+      "group": "build"
+    },
+    {
+      "label": "zip",
+      "type": "shell",
+      "command": "cd build; zip web.zip * -r -x \\*packages\\*",
+      "dependsOn": [
+        "webdev build"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "deploy",
+      "type": "shell",
+      "command": "scp -i ~/.ssh/praktikertjanst build/web.zip hgridhem@dosojin.oderland.com:public_html",
+      "dependsOn": [
+        "zip"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "connect",
+      "type": "shell",
+      "command": "ssh -i ~/.ssh/praktikertjanst hgridhem@dosojin.oderland.com",
+      "problemMatcher": []
+    },
+  ]
 }
-

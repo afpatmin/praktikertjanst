@@ -117,7 +117,7 @@ class BreadcrumbsComponent {
     routerState = state;
     final segments = pathSegments.toList();
 
-    crumbLinks = List(segments.length);
+    crumbLinks = List.filled(segments.length, null);
 
     for (var i = 0; i < segments.length; i++) {
       final s = segments.take(i + 1);
