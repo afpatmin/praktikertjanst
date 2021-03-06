@@ -11,7 +11,7 @@ dependencies:
   fo_components:
     git: https://github.com/afpatmin/fo_components.git
   angular: ^6.0.1
-  angular_components: ^1.0.1
+  angular_components: ^1.0.2
   angular_router: ^2.0.0
   grid_css: ^1.0.0
   http: ^0.12.0+2
@@ -25,4 +25,4 @@ dev_dependencies:
 dependency_overrides:
   grid_css: ^1.0.0
   intl: ^0.16.0
-  analyzer: ^0.40.0
+  analyzer: ^0.40.0 
