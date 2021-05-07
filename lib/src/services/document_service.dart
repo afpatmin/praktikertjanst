@@ -81,15 +81,15 @@ class DocumentService extends ResourceService<Document> {
         ..type = ResourceType.document
         ..size = '200.9 kb'
         ..url['sv'] =
-            'https://hg-rid.eu/documents/sv/checklist-upkeep-of-amalgam-separator-sv.pdf'
+            'https://hg-rid.eu/documents/sv/checklist-upkeep-of-amalgam-separator-sv-sign.pdf'
         ..url['en'] =
-            'https://hg-rid.eu/documents/en/checklist-upkeep-of-amalgam-separator-en.pdf'
+            'https://hg-rid.eu/documents/en/checklist-upkeep-of-amalgam-separator-en-sign.pdf'
         ..url['fr'] =
-            'https://hg-rid.eu/documents/fr/checklist-upkeep-of-amalgam-separator-fr.pdf'
+            'https://hg-rid.eu/documents/fr/checklist-upkeep-of-amalgam-separator-fr-sign.pdf'
         ..url['es'] =
-            'https://hg-rid.eu/documents/es/checklist-upkeep-of-amalgam-separator-es.pdf'
+            'https://hg-rid.eu/documents/es/checklist-upkeep-of-amalgam-separator-es-sign.pdf'
         ..url['de'] =
-            'https://hg-rid.eu/documents/de/checklist-upkeep-of-amalgam-separator-de.pdf'
+            'https://hg-rid.eu/documents/de/checklist-upkeep-of-amalgam-separator-de-sign.pdf'
         ..document_type = 'pdf',
       'Checklista övrig': Document()
         ..icon = 'pool'
@@ -118,15 +118,15 @@ class DocumentService extends ResourceService<Document> {
         ..type = ResourceType.document
         ..size = '303.3 kb'
         ..url['sv'] =
-            'https://hg-rid.eu/documents/sv/checklist-upkeep-of-amalgam-separator-sv-sign.pdf'
+            'https://hg-rid.eu/documents/sv/checklist-upkeep-of-amalgam-separator-sv.pdf'
         ..url['en'] =
-            'https://hg-rid.eu/documents/en/checklist-upkeep-of-amalgam-separator-en-sign.pdf'
+            'https://hg-rid.eu/documents/en/checklist-upkeep-of-amalgam-separator-en.pdf'
         ..url['fr'] =
-            'https://hg-rid.eu/documents/fr/checklist-upkeep-of-amalgam-separator-fr-sign.pdf'
+            'https://hg-rid.eu/documents/fr/checklist-upkeep-of-amalgam-separator-fr.pdf'
         ..url['es'] =
-            'https://hg-rid.eu/documents/es/checklist-upkeep-of-amalgam-separator-es-sign.pdf'
+            'https://hg-rid.eu/documents/es/checklist-upkeep-of-amalgam-separator-es.pdf'
         ..url['de'] =
-            'https://hg-rid.eu/documents/de/checklist-upkeep-of-amalgam-separator-de-sign.pdf'
+            'https://hg-rid.eu/documents/de/checklist-upkeep-of-amalgam-separator-de.pdf'
         ..document_type = 'pdf',
       'EU:s förordning om kvicksilver': Document()
         ..icon = 'pool'
