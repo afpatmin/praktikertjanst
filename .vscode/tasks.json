@@ -18,7 +18,7 @@
     {
       "label": "webdev build",
       "type": "shell",
-      "command": "webdev build --output web:build",
+      "command": "webdev build --output web:build --release",
       "dependsOn": [
         "remove build"
       ],

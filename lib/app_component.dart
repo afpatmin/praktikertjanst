@@ -132,20 +132,6 @@ class AppComponent {
     _router.onRouteActivated.listen((state) {
       window.scrollTo(0, 0);
     });
-
-    menuOptions = {
-      '': [
-        FoDropdownOption()
-          ..id = '${msg.currentLanguage}/${msg.home_url}/${msg.contact}'
-          ..label = _capitalize(msg.contact),
-        FoDropdownOption()
-          ..id = '${msg.currentLanguage}/${msg.home_url}/${msg.library_url}'
-          ..label = _capitalize(msg.library),
-        FoDropdownOption()
-          ..id = 'wordlist'
-          ..label = _capitalize(msg.word_list)
-      ]
-    };
   }
 
   List<RelativePosition> get position => RelativePosition.AdjacentBottomEdge;
@@ -223,6 +209,20 @@ class AppComponent {
 
     _generateMetaDescription();
     _generateTitle();
+
+    menuOptions = {
+      '': [
+        FoDropdownOption()
+          ..id = '${msg.currentLanguage}/${msg.home_url}/${msg.contact}'
+          ..label = _capitalize(msg.contact),
+        FoDropdownOption()
+          ..id = '${msg.currentLanguage}/${msg.home_url}/${msg.library_url}'
+          ..label = _capitalize(msg.library),
+        FoDropdownOption()
+          ..id = 'wordlist'
+          ..label = _capitalize(msg.word_list)
+      ]
+    };
 
     loaded = true;
   }
