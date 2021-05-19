@@ -8,6 +8,13 @@ img#materiallogo {
     width:100px;
 }
 
+div#report {
+  margin-bottom: 16px;
+  a {
+    color: #003C5A;
+  }
+}
+
 iframe {
     border: 0;
     width: $large-width;
