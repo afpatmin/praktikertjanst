@@ -1,10 +1,18 @@
-FROM dart:2.18.7
+FROM debian:bullseye-slim
 
-# Add pub global binaries to PATH
-ENV PATH="$PATH:/root/.pub-cache/bin"
+ARG DART_VERSION=2.10.1
 
-# Install webdev and build_runner globally
-RUN dart pub global activate webdev && \
-    dart pub global activate build_runner
+# Add Dart SDK and pub global binaries to PATH
+ENV DART_SDK=/usr/lib/dart-sdk
+ENV PATH="${PATH}:${DART_SDK}/bin:/root/.pub-cache/bin"
+
+# Install exact Dart SDK version from the official archive and common tooling.
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends ca-certificates curl git unzip xz-utils && \
+    rm -rf /var/lib/apt/lists/* && \
+    curl -fsSL "https://storage.googleapis.com/dart-archive/channels/stable/release/${DART_VERSION}/sdk/dartsdk-linux-x64-release.zip" -o /tmp/dartsdk.zip && \
+    unzip /tmp/dartsdk.zip -d /usr/lib && \
+    rm -f /tmp/dartsdk.zip && \
+    dart --version
 
 WORKDIR /workspace
