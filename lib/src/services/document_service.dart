@@ -91,43 +91,6 @@ class DocumentService extends ResourceService<Document> {
         ..url['de'] =
             'https://hg-rid.eu/documents/de/checklist-upkeep-of-amalgam-separator-de-sign.pdf'
         ..document_type = 'pdf',
-      'Checklista övrig': Document()
-        ..icon = 'pool'
-        ..id = 'Checklista övrig'
-        ..img_url = 'pics/quicksilver_management.jpg'
-        ..phrases['sv'] = (Phrases()
-          ..name = 'Checklista övrig'
-          ..description = 'Checklista övrig'
-          ..url = 'checklista-ovrig')
-        ..phrases['en'] = (Phrases()
-          ..name = 'Checklist (other)'
-          ..description = 'Checklist (other)'
-          ..url = 'checklist-other')
-        ..phrases['fr'] = (Phrases()
-          ..name = 'Liste de vérifications, autre'
-          ..description = 'Liste de vérifications, autre'
-          ..url = 'liste-verifications-autre')
-        ..phrases['es'] = (Phrases()
-          ..name = 'Lista de verificación, otros'
-          ..description = 'Lista de verificación, otros'
-          ..url = 'lista-de-verificacion-otros')
-        ..phrases['de'] = (Phrases()
-          ..name = 'Checkliste, sonstiges'
-          ..description = 'Checkliste, sonstiges'
-          ..url = 'checkliste-sonstiges')
-        ..type = ResourceType.document
-        ..size = '303.3 kb'
-        ..url['sv'] =
-            'https://hg-rid.eu/documents/sv/checklist-upkeep-of-amalgam-separator-sv.pdf'
-        ..url['en'] =
-            'https://hg-rid.eu/documents/en/checklist-upkeep-of-amalgam-separator-en.pdf'
-        ..url['fr'] =
-            'https://hg-rid.eu/documents/fr/checklist-upkeep-of-amalgam-separator-fr.pdf'
-        ..url['es'] =
-            'https://hg-rid.eu/documents/es/checklist-upkeep-of-amalgam-separator-es.pdf'
-        ..url['de'] =
-            'https://hg-rid.eu/documents/de/checklist-upkeep-of-amalgam-separator-de.pdf'
-        ..document_type = 'pdf',
       'EU:s förordning om kvicksilver': Document()
         ..icon = 'pool'
         ..id = 'EU:s förordning om kvicksilver'
@@ -200,43 +163,6 @@ class DocumentService extends ResourceService<Document> {
         ..url['de'] =
             'https://www.government.se/legal-documents/2000/08/ds-200061/'
         ..document_type = 'link',
-      'Vägledningsdokument': Document()
-        ..icon = 'pool'
-        ..id = 'Vägledningsdokument'
-        ..img_url = 'pics/quicksilver_management.jpg'
-        ..phrases['sv'] = (Phrases()
-          ..name = 'Vägledningsdokument'
-          ..description = 'Vägledningsdokument'
-          ..url = 'vagledningsdokument')
-        ..phrases['en'] = (Phrases()
-          ..name = 'Guidelines for dental care in Sweden'
-          ..description = 'Guidelines for dental care in Sweden'
-          ..url = 'guidance-document')
-        ..phrases['fr'] = (Phrases()
-          ..name = 'Directives'
-          ..description = 'Directives'
-          ..url = 'directives')
-        ..phrases['es'] = (Phrases()
-          ..name = 'Documento de directrices'
-          ..description = 'Documento de directrices'
-          ..url = 'documento-de-directrices')
-        ..phrases['de'] = (Phrases()
-          ..name = 'Richtlinien'
-          ..description = 'Richtlinien'
-          ..url = 'richtlinien')
-        ..type = ResourceType.document
-        ..size = '1,6 MB'
-        ..url['sv'] =
-            'https://hg-rid.eu/documents/sv/vagledning-kvicksilver-tandvarden.pdf'
-        ..url['en'] =
-            'https://hg-rid.eu/documents/en/guidelines-mercury-for-dental-care-in-sweden.pdf'
-        ..url['fr'] =
-            'https://hg-rid.eu/documents/fr/Guidelines_mercury_for_dental_care_in_Sweden.pdf'
-        ..url['es'] =
-            'https://hg-rid.eu/documents/es/Guidelines_mercury_for_dental_care_in_Sweden.pdf'
-        ..url['de'] =
-            'https://hg-rid.eu/documents/de/guidelines-mercury-for-dental-care-in-sweden.pdf'
-        ..document_type = 'pdf',
     };
   }
-}
+} 
